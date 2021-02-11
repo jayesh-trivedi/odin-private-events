@@ -10,10 +10,10 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
     <body>
     <div>
       <div>
+        <br><br>
         <%= link_to 'Home', root_path %>
         <% if session[:current_user_id] %>
           <%= link_to 'My Page', user_path(session[:current_user_id])%>

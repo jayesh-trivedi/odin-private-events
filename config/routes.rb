@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root to: 'events#index'
   resources :users, only: [:show, :new, :create]
   resources :sessions, only: [:create, :new, :destroy]
-  resources :events, only: [:new, :create, :show, :index]
+  resources :events, only: [:new, :create, :show, :index] do
+    get :attend, on: :member
+end
 end

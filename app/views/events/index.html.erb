@@ -1,0 +1,14 @@
+<h1>Current Events!</h1>
+
+<% @events.reverse.each do |event| %>
+  <div>
+    <div><%= "Created #{event.created_at.strftime("%m/%d/%Y")}" %></div>
+    <h2><%= event.title %></h2><br>
+    <div><%= event.date.strftime("%m/%d/%Y") %></div><br>
+    <div><%= event.description %></div><br>
+    <div>
+      <%= link_to 'Go To Event', event_path(event.id) %>
+      <%= link_to 'Go To User', user_path(event.creator_id)%>
+    </div>
+  </div>
+<% end %>

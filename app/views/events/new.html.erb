@@ -1,0 +1,10 @@
+<div>
+  <%= form_for @event, url: {action: "create"} do |f| %>
+    <%= f.label :title, 'Title' %>
+    <div><%= f.text_field :title, placeholder: "Event Title" %><br></div>
+    <%= f.label :description, 'Description' %>
+    <div><%= f.text_field :description, placeholder: "Event Description" %><br></div>
+    <div><%= f.date_select :date %><br></div>
+    <%= f.submit "Submit" %>
+  <% end %>
+</div>

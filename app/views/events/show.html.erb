@@ -2,6 +2,4 @@
 <h2><%= "By #{User.find(@event.creator_id).username}"%></h2><br>
 
 <div><%= @event.description %></div>
-
-<%= link_to 'Attend Event!', attend_event_path %>
-<% end %>
+<div><%= "Date - #{@event.date.strftime("%m/%d/%Y")}"%></div>

@@ -1,0 +1,8 @@
+<h1>Sign Up</h1>
+<div class='forms'>
+  <%= form_for @user, url: {action: "create"} do |f| %>
+    <%= f.label :username, 'username' %>
+    <div><%= f.text_field :username, placeholder: "Your Username"%></div>
+    <%= f.submit "Submit" %>
+  <% end %>
+</div>
